@@ -32,21 +32,6 @@ navbar {
   margin: auto 1rem auto auto;
 }
 
-body {
-  padding: auto;
-}
-
-main {
-  margin: 0 auto;
-  margin-top: 4rem;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-main h2 {
-  margin: 1rem auto;
-}
-
 /********/
 /* Tabs */
 /********/
@@ -75,6 +60,25 @@ main h2 {
 
 .tab.active {
   background-color: #ccc;
+}
+
+/********/
+/* Main */
+/********/
+
+body {
+  padding: auto;
+}
+
+main {
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+main h2 {
+  margin: 1rem auto;
 }
 
 /*********/

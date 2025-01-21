@@ -43,6 +43,11 @@
     $defaultColumns = ['ExpID', 'Date', 'Performance', 'Total_Obs','W_RMS_del','Detect_Rate_X', 'Notes'];
   */
 
+  /**
+   * Include functions to:
+   * - render the main table display
+   * - create a simple assessment of the quality of a data-row (session)
+   */
   require_once 'functions.php';
 
   /////////////
@@ -124,7 +129,12 @@
     die("<pre> Error: " . $e->getMessage() . "</pre>");
   }
 
+  //////////////////
+  // The web-page //
+  //////////////////
+
   include('index.view.php');
   
+  // close up the db connection
   $conn->close();
 ?>

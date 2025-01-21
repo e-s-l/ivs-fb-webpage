@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tabs.forEach(tab => {
       const isAuscope = tab.getAttribute('in-auscope-array').trim();
-
       if (!showAuscopeOnly) {
         if (isAuscope === 'false') {
           tab.style.display = 'none';
