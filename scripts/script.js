@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
 
   ////////////////////
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     auscopeToggle.checked = isSelectedTabAuscope;
   }
 
-  // show all database data:
+  // Show all database data:
 
   document.getElementById('show-full-toggle').addEventListener('change', function () {
     document.getElementById('toggle-form').submit();

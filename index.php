@@ -1,4 +1,14 @@
 <?php
+  /**
+   * IVS Feedback frontend. 
+   *
+   * This is colourful summary of Tiege's database.
+
+   * PHP version 8.1
+   *
+   * @author   ESL
+   * @version  0.0.5
+   */
 
 
   ///////////
@@ -20,6 +30,19 @@
   ////////////
 
   require_once 'configuration.php';
+
+  /*
+  Example config file:
+    $servername = "hostname";
+    $username = "username";
+    $password = "password";
+    $dbname = "database";
+    // The antenna sites to show when all-sites unchecked
+    $auscope = array("Hb","Yg","Ho","Ke","Cd")
+    // The columns to show in the succient view (to show when all-data unchecked)
+    $defaultColumns = ['ExpID', 'Date', 'Performance', 'Total_Obs','W_RMS_del','Detect_Rate_X', 'Notes'];
+  */
+
   require_once 'functions.php';
 
   /////////////
@@ -44,7 +67,6 @@
 
   // if all-data checkbox is not checked, then apply filtering
   $showFull = isset($_GET['showFull']) && $_GET['showFull'] === '1';
-  $defaultColumns = ['ExpID', 'Date', 'Performance', 'Total_Obs','W_RMS_del','Detect_Rate_X'];
 
   try {
     // Connect to the database
@@ -88,7 +110,6 @@
               ARRAY_FILTER_USE_KEY
               );
           }
-        
           $rows[] = $row;
         }
 
@@ -99,7 +120,6 @@
     } else {
         throw new Exception("Failed to fetch data from $selectedTable: " . $conn->error);
     }
-    
   } catch (Exception $e) {
     die("<pre> Error: " . $e->getMessage() . "</pre>");
   }

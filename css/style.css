@@ -1,68 +1,16 @@
+/**********/
+/* Resets */
+/**********/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.tabs {
-  display: flex;
-  margin: 0.5rem;
-  visibility: hidden;
-}
-
-.tabs.show {
-  visibility: visible;
-}
-
-.tab {
-  padding: 0.5rem;
-  margin: auto 5px;
-  cursor: pointer;
-  background-color: #f1f1f1;
-  border: 1px solid #ddd;
-}
-
-.tab:hover, .tab:focus {
-  background-color: #ddd;
-}
-
-.tab.active {
-  background-color: #ccc;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-/*
-tr:hover, tr:focus, tr:active {
-  background-color: #fff;
-}
-*/
-
-/*****************/
-
-.quality-1 {
-  background-color: #d4edda;
-}
-
-.quality-2 {
-  background-color: #fff3cd;
-}
-
-.quality-3 {
-  background-color: #f8d7da;
-}
-
-
-/*****************/
+/**********/
+/* Header */
+/**********/
 
 navbar {
   display: flex;
@@ -90,7 +38,7 @@ body {
 
 main {
   margin: 0 auto;
-  margin-top: 6rem;
+  margin-top: 4rem;
   padding: 1rem;
   box-sizing: border-box;
 }
@@ -98,6 +46,57 @@ main {
 main h2 {
   margin: 1rem auto;
 }
+
+/********/
+/* Tabs */
+/********/
+
+.tabs {
+  display: flex;
+  margin: 0.5rem;
+  visibility: hidden;
+}
+
+.tabs.show {
+  visibility: visible;
+}
+
+.tab {
+  padding: 0.5rem;
+  margin: auto 5px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+}
+
+.tab:hover, .tab:focus {
+  background-color: #ddd;
+}
+
+.tab.active {
+  background-color: #ccc;
+}
+
+/*********/
+/* Table */
+/*********/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/*
+tr:hover, tr:focus, tr:active {
+  background-color: #fff;
+}
+*/
 
 .expid {
   text-transform: uppercase;
@@ -108,7 +107,25 @@ td.date {
   line-height: 1.5;
 }
 
-/* Mobile Screens */
+/*****************/
+/* Colour-Coding */
+/*****************/
+
+.quality-1 {
+  background-color: #d4edda;
+}
+
+.quality-2 {
+  background-color: #fff3cd;
+}
+
+.quality-3 {
+  background-color: #f8d7da;
+}
+
+/*****************/
+/* Media Queries */
+/*****************/
 
 @media (max-width: 768px) {
 
@@ -188,5 +205,4 @@ td.date {
       flex-shrink: 0;
       margin-right: 1rem;
   }
-
 }
